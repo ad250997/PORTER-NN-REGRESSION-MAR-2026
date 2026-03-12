@@ -10,12 +10,13 @@ def preprocess(data):
     data = data.copy()
 
     data["created_at"] = pd.to_datetime(data["created_at"])
-    data["actual_delivery_time"] = pd.to_datetime(data["actual_delivery_time"])
+    # data["actual_delivery_time"] = pd.to_datetime(data["actual_delivery_time"])
 
     data["hour_of_day"] = data["created_at"].dt.hour
     data["day_of_week"] = data["created_at"].dt.day_of_week
 
-    data = data.drop(columns=["created_at","actual_delivery_time"])
+    # data = data.drop(columns=["created_at","actual_delivery_time"])
+    data = data.drop(columns=["created_at"])
 
     data["hour_of_day_sin"] = np.sin(2*np.pi*data["hour_of_day"]/24)
     data["hour_of_day_cos"] = np.cos(2*np.pi*data["hour_of_day"]/24)

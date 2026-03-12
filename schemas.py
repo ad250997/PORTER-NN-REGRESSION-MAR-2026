@@ -3,7 +3,6 @@ from pydantic import BaseModel
 class OrderData(BaseModel):
 
     created_at: str
-    actual_delivery_time: str
 
     total_items: int
     subtotal: float
