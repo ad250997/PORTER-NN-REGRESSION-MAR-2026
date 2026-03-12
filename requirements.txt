@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+streamlit
+tensorflow
+pandas
+numpy
+joblib
+pydantic
+requests
+datetime
